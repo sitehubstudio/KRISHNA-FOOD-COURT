@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Full Restaurant Menu | Krishna Food Court, Korrah, Hazaribagh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="menu-page-body">
+  <aside class="top-announcement">
+    <div class="container announcement-content">
+      <span><i class="fa-solid fa-motorcycle"></i> <strong>Free Home Delivery</strong> in Hazaribagh</span>
+      <span class="announcement-sep">•</span>
+      <span><i class="fa-solid fa-phone"></i> Orders: <a href="tel:7549052423">7549052423</a> / <a href="tel:8899231208">8899231208</a></span>
+      <span class="announcement-sep">•</span>
+      <span><i class="fa-solid fa-location-dot"></i> Near Petrol Pump, Korrah</span>
+    </div>
+  </aside>
+  <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-sub">श्री</span>
+        <span class="brand-main">Krishna</span>
+        <span class="brand-tag">Food Court</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#hero" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#fastfood" class="nav-link">Live Fast Food</a>
+        <a href="index.html#gallery" class="nav-link">Gallery</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:7549052423" class="btn btn-outline-nav"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <section class="menu-hero-header">
+    <div class="container text-center">
+      <span class="section-tag">Authentic Taste of Korrah</span>
+      <h1 class="menu-hero-title">OUR MENU</h1>
+      <p class="menu-hero-subtitle">Explore our full menu at Krishna Food Court</p>
+      <p class="menu-hero-note"><i class="fa-solid fa-kitchen-set"></i> Freshly prepared on order • Dine-in &amp; Free Home Delivery across Hazaribagh</p>
+      <div class="menu-search-wrapper">
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="menuSearchInput" placeholder="Search dishes (e.g. Chowmein, Biryani, Butter Masala, Pizza)..." autocomplete="off" aria-label="Search dishes" />
+          <button id="clearSearchBtn" class="clear-search-btn" title="Clear search"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="category-sticky-bar">
+    <div class="container">
+      <div class="category-scroll-container" id="categoryScrollContainer" role="tablist"></div>
+    </div>
+  </div>
+  <main class="container menu-list-container">
+    <div class="menu-meta-status">
+      <span id="menuResultsCount" class="results-counter">Loading items...</span>
+      <span class="menu-call-helper">Call to order: <a href="tel:7549052423">7549052423</a> / <a href="tel:8899231208">8899231208</a></span>
+    </div>
+    <div class="menu-items-grid" id="fullMenuContainer" aria-live="polite"></div>
+    <div id="noResultsState" class="no-results-box text-center p-12 bg-white rounded-xl border border-dashed border-stone-300 my-6" style="display: none;">
+      <i class="fa-solid fa-utensils text-4xl text-stone-400 mb-4 block"></i>
+      <h3 class="text-xl font-bold mb-2">No dishes match your search</h3>
+      <p class="text-sm text-stone-600 mb-4">Try searching for another dish or click below to view all items.</p>
+      <button class="btn btn-primary" onclick="resetSearchAndFilter()"><i class="fa-solid fa-rotate-left"></i> View All Dishes</button>
+    </div>
+  </main>
+  <section class="delivery-banner">
+    <div class="container delivery-banner-inner">
+      <div class="delivery-text">
+        <span class="delivery-pill"><i class="fa-solid fa-motorcycle"></i> Quick &amp; Fresh</span>
+        <h2>Enjoy Free Home Delivery</h2>
+        <p>Order anything from our menu straight to your doorstep in Hazaribagh.</p>
+        <p class="phone-highlight"><i class="fa-solid fa-phone"></i> 7549052423 &nbsp;|&nbsp; 8899231208</p>
+      </div>
+      <div class="delivery-btns">
+        <a href="tel:7549052423" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call to Order</a>
+        <a href="https://wa.me/917549052423?text=Hi%20Krishna%20Food%20Court,%20I%20would%20like%20to%20order%20food." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp Order</a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand"><h3>श्री Krishna Food Court</h3><p>“Good Food • Good Mood”</p><p class="footer-addr">Near Petrol Pump, Korrah, Hazaribagh, Jharkhand</p></div>
+      <div class="footer-links"><a href="index.html#hero">Home</a><a href="menu.html">Menu</a><a href="index.html#about">About</a><a href="index.html#fastfood">Fast Food</a><a href="index.html#gallery">Gallery</a><a href="index.html#contact">Contact</a></div>
+      <div class="footer-bottom"><p>© 2026 Krishna Food Court. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <div class="mobile-sticky-bar">
+    <a href="tel:7549052423" class="sticky-btn sticky-call"><i class="fa-solid fa-phone"></i> Call Order</a>
+    <a href="https://wa.me/917549052423?text=Hi%20Krishna%20Food%20Court,%20I%20want%20to%20order." target="_blank" class="sticky-btn sticky-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Order</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
